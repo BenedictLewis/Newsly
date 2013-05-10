@@ -30,8 +30,10 @@ $('#msg').show(); // Show the update message
       /* loadMore - Load more news articles into timeline */
       $('#loadMore').click(function() {
           $(this).button('loading'); // Change button state to loading
+          initialLoad = parseInt(initialLoad);
+          loadMore = parseInt(loadMore);
           initialLoad = initialLoad + loadMore; // Increase news items to fetch
-          getNews(initialLoad); // Return the number of news items
+          getNews(); // Return the number of news items
           $(this).button('reset'); // Reset button state
       });
       /* End loadMore */
