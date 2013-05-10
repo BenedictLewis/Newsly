@@ -55,7 +55,6 @@
             }
             $('#msg').html("Updating articles... Please wait."); // Set update message
             $('#msg').show(); // Show the update message
-
             $('#newsTimeline').empty(); // Clear the timeline
             window.localStorage.setItem("feed", ""); // Clear the local storage
             for(var i=0; i<feeds.entries.length; i++){
