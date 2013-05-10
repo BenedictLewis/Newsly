@@ -4,6 +4,7 @@ $('#msg').show(); // Show the update message
     var initialLoad = window.localStorage.getItem("initialLoad"); // The number of news items to fetch by default
     var loadMore = window.localStorage.getItem("loadMore"); // The number of news items to fetch by default
     var RSS = window.localStorage.getItem("RSS"); // The feed URL
+    var feed = window.localStorage.getItem("feed");
     /* End Variables */
 
     /* Computing Functions */
@@ -51,7 +52,6 @@ $('#msg').show(); // Show the update message
           function(feeds){
             // Check for errors
             if(!feeds){
-              var feed = window.localStorage.getItem("feed"); // Gets the offline feed
               $('#newsTimeline').html(feed); // Set the timeline to the offline feed
               return false;
             }
