@@ -1,3 +1,5 @@
+$('#msg').html("Updating articles... Please wait."); // Set update message
+$('#msg').show(); // Show the update message
 /* Variables */
     var initialLoad = window.localStorage.getItem("initialLoad"); // The number of news items to fetch by default
     var loadMore = window.localStorage.getItem("loadMore"); // The number of news items to fetch by default
@@ -53,8 +55,6 @@
               $('#newsTimeline').html(feed); // Set the timeline to the offline feed
               return false;
             }
-            $('#msg').html("Updating articles... Please wait."); // Set update message
-            $('#msg').show(); // Show the update message
             $('#newsTimeline').empty(); // Clear the timeline
             window.localStorage.setItem("feed", ""); // Clear the local storage
             for(var i=0; i<feeds.entries.length; i++){
